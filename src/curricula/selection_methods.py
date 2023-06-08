@@ -1,3 +1,4 @@
+from typing import Optional
 import torch
 import numpy as np
 import wandb
@@ -6,17 +7,22 @@ import torchmetrics
 import numbers
 import warnings
 
+import torch.nn as nn
 from torch.nn import functional as F
 from src.curricula.utils_bald import get_bald, enable_dropout, compute_entropy, compute_conditional_entropy
 from src.curricula.utils_selection_methods import top_x_indices, create_logging_dict
 
 
 def _compute_irreducible_loss(
-    data=None,
-    target=None,
-    global_index=None,
-    irreducible_loss_generator=None,
-    target_device=None,
+        data=None,
+        target=None,
+        global_index=None,
+        irreducible_loss_generator: Optional[nn.Module]=None,
+        target_device=None,
+        cross_domain_type='heuristic',
+        transition_matrix=None,
+        lp_model=None,
+        embedding=None
 ):
     if type(irreducible_loss_generator) is torch.Tensor:
         # send the whole tensor over
@@ -29,6 +35,27 @@ def _compute_irreducible_loss(
             )
 
         irreducible_loss = irreducible_loss_generator[global_index]
+    elif cross_domain_type == 'entropy':
+        irreducible_loss_generator.eval()
+        pred = irreducible_loss_generator(data)
+        pred_target = torch.argmax(pred, dim=1)
+        irreducible_loss = F.cross_entropy(
+            pred, pred_target, reduction="none"
+        )
+    elif cross_domain_type == 'transition':
+        irreducible_loss_generator.eval()
+        transition_matrix = torch.tensor(transition_matrix).to(device=target_device)
+        pred = irreducible_loss_generator(data)
+        pred = (pred @ transition_matrix.to(torch.float32))
+        irreducible_loss = F.cross_entropy(
+            pred, target, reduction="none"
+        )
+    elif cross_domain_type == 'lp':
+        pred = lp_model.predict_proba(embedding)
+        pred = torch.from_numpy(pred).to(device=target_device)
+        irreducible_loss = F.cross_entropy(
+            pred, target, reduction="none"
+        )
     else:
         irreducible_loss = F.cross_entropy(
             irreducible_loss_generator(data), target, reduction="none"

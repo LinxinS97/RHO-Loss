@@ -1,0 +1,70 @@
+# @package _global_
+mode: "irreducible"
+defaults:
+  - trainer: default.yaml
+  - model: one_model.yaml
+  - optimizer: adamw.yaml
+  - datamodule: cifar10_datamodule.yaml
+  - scheduler: cosine_annealing.yaml
+  - callbacks: default.yaml
+  - logger: wandb.yaml
+  - hydra: default.yaml
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+  - _self_
+
+seed: 13
+finetune: 1
+
+transfer_model:
+  _target_: src.models.MultiModels.MultiModels.load_from_checkpoint
+  # checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/01-54-14/checkpoints/epoch_098.ckpt  # transition 0.5
+  # checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/02-48-18/checkpoints/epoch_097.ckpt  # transition 0.1
+  # checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/04-13-11/checkpoints/epoch_096.ckpt  # uniform 0.1
+  # checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/04-34-26/checkpoints/epoch_095.ckpt  # entropy 0.1
+  checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/05-17-51/checkpoints/epoch_093.ckpt  # lp 0.1
+
+
+datamodule:
+  trainset_data_aug: True # irreducible training: augment the validation set!
+  # irreducible_train_val_test_split: True   # not used yet
+  valset_fraction: 0.01
+  training_fraction: 0.1
+
+
+trainer:
+  _target_: pytorch_lightning.Trainer
+  gpus: 1
+  min_epochs: 50
+  max_epochs: 50
+
+logger:
+  wandb:
+    name: cifar10usage0.1_cifar100_lp_ft_epoch50
+
+#callbacks:
+#  log_per_step:
+#    _target_: src.callbacks.wandb_callbacks.SavePerStepCheckpoint
+#    prop: 0.5  # training_set_size / batch_size * prop
+
+# path to original working directory
+# hydra hijacks working directory by changing it to the current log directory,
+# so it's useful to have this path as a special variable
+# learn more here: https://hydra.cc/docs/next/tutorials/basic/running_your_app/working_directory
+work_dir: ${hydra:runtime.cwd}
+
+# use `python run.py debug=true` for easy debugging!
+# this will run 1 train, val and test loop with only 1 batch
+# equivalent to running `python run.py trainer.fast_dev_run=true`
+# (this is placed here just for easier access from command line)
+debug: False
+# pretty print config at the start of the run using Rich library
+print_config: True
+# disable python warnings if they annoy you
+ignore_warnings: True
+# check performance on test set, using the best model achieved during training
+test_after_training: True
+
+base_outdir: logs
+
+eval_set: test  #val or test

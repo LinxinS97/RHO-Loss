@@ -1,0 +1,81 @@
+# @package _global_
+mode:
+    training_mode: "curriculm"
+    
+# specify here default training configuration
+defaults:
+  - model: multi_model.yaml
+  - optimizer: adamw.yaml
+  - trainer: default.yaml
+  - datamodule: cifar100_datamodule.yaml
+#  - datamodule: imagenet_datamodule.yaml
+  - scheduler: cosine_annealing.yaml
+  - selection_method: reducible_loss_selection.yaml  # uniform_selection, reducible_loss_selection
+  - callbacks: default.yaml # set this to null if you don't want to use callbacks
+  - logger: wandb.yaml # set logger here or use command line (e.g. `python run.py logger=wandb`)
+  # - experiment: null
+  # - hparams_search: null
+  - hydra: default.yaml
+  - irreducible_loss_generator: irreducible_loss_model.yaml
+  # enable color logging
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+  - _self_
+
+trainer:
+  min_epochs: 100
+  max_epochs: 100
+
+model:
+  percent_train: 0.1
+
+logger:
+  wandb:
+    name: cifar10usage0.1_cifar100_lp_top10_epoch100
+
+datamodule:
+  trainset_data_aug: True
+  batch_size: 320
+
+# if not uniform
+selection_method:
+  cross_domain_type: lp  # entropy, transition, lp
+  transition_matrix_or_lp_path: /home/elpis_ubuntu/pretrain/RHO-Loss/data/cifar10usage0.1_cifar100_lp.pkl
+  embedding_path: /home/elpis_ubuntu/pretrain/RHO-Loss/data/cifar10usage0.1_cifar100_embedding.pkl
+  source_domain_class: 10
+  target_domain_class: 100
+  lr: 0.001
+
+
+# This path is for "linear probe or transfer"
+irreducible_loss_generator:
+  checkpoint_path: /home/elpis_ubuntu/pretrain/RHO-Loss/logs/runs/2023-03-01/02-38-19/checkpoints/epoch_040.ckpt
+
+
+# path to original working directory
+# hydra hijacks working directory by changing it to the current log directory,
+# so it's useful to have this path as a special variable
+# learn more here: https://hydra.cc/docs/next/tutorials/basic/running_your_app/working_directory
+work_dir: ${hydra:runtime.cwd}
+
+# use `python run.py debug=true` for easy debugging!
+# this will run 1 train, val and test loop with only 1 batch
+# equivalent to running `python run.py trainer.fast_dev_run=true`
+# (this is placed here just for easier access from command line)
+debug: False
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+# disable python warnings if they annoy you
+ignore_warnings: True
+
+# check performance on test set, using the best model achieved during training
+# lightning chooses best model based on metric specified in checkpoint callback
+test_after_training: True
+
+seed: 12
+
+base_outdir: logs
+
+eval_set: val  #val or test

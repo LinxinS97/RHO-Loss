@@ -232,6 +232,7 @@ class GoldiproxDatamodule(pl.LightningDataModule):
         trainset_data_aug=False,
         valset_data_aug=False,
         valset_fraction=1.0,
+        training_fraction=1.0,
         percent_clean=None,
     ):
         super().__init__()
@@ -255,6 +256,7 @@ class GoldiproxDatamodule(pl.LightningDataModule):
         self.valset_data_aug = valset_data_aug
         self.shuffle = shuffle
         self.valset_fraction = valset_fraction
+        self.training_fraction = training_fraction
         # attributes needed for double irrlomo training
         self.indices_train_split_1 = None
         self.indices_train_split_2 = None
@@ -558,6 +560,28 @@ class CIFAR10DataModule(GoldiproxDatamodule):
                 )
 
             val_subset = reduced_val_subset
+
+        if self.training_fraction < 1:
+            temp_train_and_valset = indices_CIFAR100(
+                self.data_dir,
+                train=True,
+                transform=self.transform
+                if not self.valset_data_aug
+                else self.data_augmented_transform,
+            )
+            targets = np.array(temp_train_and_valset.targets)
+            unique_targets = np.unique(targets).tolist()
+
+            reduced_train_subset = []
+            for t in unique_targets:
+                target_indices = np.flatnonzero(targets == t).tolist()
+                target_indices_in_trainset = list(
+                    set(target_indices) & set(train_subset)
+                )  # take targets that are in the validation subset only
+                reduced_train_subset.extend(
+                    target_indices_in_trainset[: int(len(target_indices_in_trainset) * self.training_fraction)]
+                )
+            train_subset = reduced_train_subset
 
         log.info(f"Training set has {len(train_subset)} datapoints")
         log.info(f"Validation set has {len(val_subset)} datapoints")
@@ -992,7 +1016,7 @@ class ImageNetDataModule(GoldiproxDatamodule):
         # if only a part of the val subset should be used
         if self.valset_fraction < 1:
             # all of this is only to make sure that the random subset is not very unbalanced
-            temp_valset = lambda: indices_ImageNet(
+            temp_valset = indices_ImageNet(
                 self.data_dir,
                 split="val",
                 transform=self.transform

@@ -1,37 +1,36 @@
 # @package _global_
 mode: "irreducible"
-  
+
 defaults:
   - trainer: default.yaml
   - model: one_model.yaml
   - optimizer: sgd.yaml
   - scheduler: cosine_annealing.yaml
-  - datamodule: qmnist_datamodule.yaml
+  - datamodule: cifar100_datamodule.yaml
   - callbacks: default.yaml
   - logger: wandb.yaml
   - hydra: default.yaml
   - _self_
 
-seed: 12
+model:
+  model:
+    pretrained: True
+    classes: 10
 
 datamodule:
   data_dir: '/scratch-ssd/goldiprox/data/'
   batch_size: 320
-  num_workers: 4
-  pin_memory: True
-  # irreducible_train_val_test_split: True   # not used yet
+  valset_fraction: 0.01
+  training_fraction: 0.1
 
 trainer:
-  _target_: pytorch_lightning.Trainer
-  gpus: 1
-  min_epochs: 100
-  max_epochs: 100
-  progress_bar_refresh_rate: 20
-  val_check_interval: 1.
+  min_epochs: 1
+  max_epochs: 50
 
-  
-optimizer:
-  lr: 0.001
+logger:
+  wandb:
+    name: test
+#    name: cifar100_pretrain_usage0.1  # 0.5
 
 # path to original working directory
 # hydra hijacks working directory by changing it to the current log directory,

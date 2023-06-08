@@ -96,6 +96,14 @@ class MultiModels(pl.LightningModule):
         self.saved_batch = None
         self.current_batch = None
 
+        self.selected_data_table = pd.DataFrame(
+            columns = ["selected_class",
+                     "selected_id",
+                     "selected_irreducible_loss",
+                     "selected_model_loss"]
+        )
+        self.log_table_locally = log_table_locally
+
         if track_all_selection:
             self.all_selection_methods = [
                 reducible_loss_selection(),
