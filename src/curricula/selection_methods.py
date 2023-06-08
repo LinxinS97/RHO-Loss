@@ -8,21 +8,22 @@ import numbers
 import warnings
 
 import torch.nn as nn
+from sklearn.linear_model import LogisticRegression
 from torch.nn import functional as F
 from src.curricula.utils_bald import get_bald, enable_dropout, compute_entropy, compute_conditional_entropy
 from src.curricula.utils_selection_methods import top_x_indices, create_logging_dict
 
 
 def _compute_irreducible_loss(
-        data=None,
-        target=None,
-        global_index=None,
-        irreducible_loss_generator: Optional[nn.Module]=None,
-        target_device=None,
-        cross_domain_type='heuristic',
-        transition_matrix=None,
-        lp_model=None,
-        embedding=None
+        data: torch.Tensor=None,
+        target: torch.Tensor=None,
+        global_index: torch.Tensor=None,
+        irreducible_loss_generator: nn.Module=None,
+        target_device: torch.device=None,
+        cross_domain_type: str='heuristic',
+        transition_matrix: torch.Tensor=None,
+        lp_model: LogisticRegression=None,
+        embedding: np.ndarray=None
 ):
     if type(irreducible_loss_generator) is torch.Tensor:
         # send the whole tensor over

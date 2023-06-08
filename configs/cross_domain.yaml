@@ -39,7 +39,7 @@ datamodule:
 
 # if not uniform
 selection_method:
-  cross_domain_type: lp  # entropy, transition, lp
+  cross_domain_type: transition  # entropy, transition, lp
   transition_matrix_or_lp_path: /home/elpis_ubuntu/pretrain/RHO-Loss/data/cifar10usage0.1_cifar100_lp.pkl
   embedding_path: /home/elpis_ubuntu/pretrain/RHO-Loss/data/cifar10usage0.1_cifar100_embedding.pkl
   source_domain_class: 10
