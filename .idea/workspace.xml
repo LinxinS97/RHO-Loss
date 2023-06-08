@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e53c3a76-ae53-49d8-8e0e-b31f784a4d2a" name="Changes" comment="update folder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/cross_domain.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/cross_domain.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/ambimnist_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/ambimnist_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/cifar100_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/cifar100_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/cifar10_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/cifar10_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/cinic10_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/cinic10_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/cinic10_relevance_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/cinic10_relevance_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/clothing1m_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/clothing1m_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/clothing1m_dirty_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/clothing1m_dirty_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/imagenet_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/imagenet_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/infimnist_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/infimnist_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/datamodule/qmnist_datamodule.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/datamodule/qmnist_datamodule.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/standard_training.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/standard_training.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/transfer_training.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/transfer_training.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/table_stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/table_stats.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/calc_transition_matrix.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/calc_transition_matrix.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/stats.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/stats.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/curricula/selection_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/curricula/selection_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datamodules/datamodules.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datamodules/datamodules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/train_standard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train_standard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tvg/demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/tvg/demo.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tvg/simplex.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/tvg/simplex.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KDMDAtb4FqIoAgREpFMsDiJbra" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/OneDrive/桌面&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.space&quot;
+  }
+}</component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="mySupportGeventDebugging" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\src" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\configs" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\configs\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\notebooks" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\scripts" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\data_analysis\cifar10_cifar100_transition_10" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\data_analysis" />
+      <recent name="\\wsl$\Ubuntu\home\elpis_ubuntu\pretrain\RHO-Loss\data_analysis\cifar10_cifar100_entropy_30" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_standard_training">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RHO-Loss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_cross_domain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RHO-Loss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_cross_domain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_irreducible" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RHO-Loss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_irreducible.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_standard_training" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RHO-Loss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_standard_training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_transfer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RHO-Loss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_transfer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_standard_training" />
+        <item itemvalue="Python.run_transfer" />
+        <item itemvalue="Python.run_cross_domain" />
+        <item itemvalue="Python.run_irreducible" />
+        <item itemvalue="Python.run" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpaceReviewFiltersPersistance">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;NeedsReview&quot;,
+    &quot;reviewer&quot;: {
+      &quot;id&quot;: &quot;2jR9uK2x2f59&quot;,
+      &quot;fullName&quot;: &quot;Linxin Song&quot;
+    }
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e53c3a76-ae53-49d8-8e0e-b31f784a4d2a" name="Changes" comment="" />
+      <created>1673504577876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673504577876</updated>
+      <workItem from="1673504579057" duration="631000" />
+      <workItem from="1673505322491" duration="2019000" />
+      <workItem from="1674045127514" duration="3027000" />
+      <workItem from="1674635160277" duration="2991000" />
+      <workItem from="1675266266415" duration="4201000" />
+      <workItem from="1675273567944" duration="1340000" />
+      <workItem from="1675275560909" duration="9702000" />
+      <workItem from="1675335507873" duration="46361000" />
+      <workItem from="1675486958389" duration="84000" />
+      <workItem from="1675487329463" duration="8914000" />
+      <workItem from="1675497157317" duration="2394000" />
+      <workItem from="1675500517231" duration="121000" />
+      <workItem from="1675500674208" duration="2875000" />
+      <workItem from="1675504284152" duration="732000" />
+      <workItem from="1675518588517" duration="4294000" />
+      <workItem from="1675534310193" duration="1818000" />
+      <workItem from="1675536591774" duration="50596000" />
+      <workItem from="1675688891927" duration="94344000" />
+      <workItem from="1676143184675" duration="31175000" />
+      <workItem from="1676531125138" duration="7109000" />
+      <workItem from="1677077122433" duration="2156000" />
+      <workItem from="1677158821357" duration="716000" />
+      <workItem from="1677160419578" duration="1072000" />
+      <workItem from="1677161526433" duration="85000" />
+      <workItem from="1677161628638" duration="476000" />
+      <workItem from="1677162215893" duration="51000" />
+      <workItem from="1677162279390" duration="4227000" />
+      <workItem from="1677174641357" duration="776000" />
+      <workItem from="1677477685070" duration="2285000" />
+      <workItem from="1677573891982" duration="3827000" />
+      <workItem from="1677610930781" duration="2000" />
+      <workItem from="1677666862363" duration="4000" />
+      <workItem from="1677668590407" duration="1100000" />
+      <workItem from="1678736339612" duration="2000" />
+      <workItem from="1679990836908" duration="2000" />
+      <workItem from="1680432995898" duration="1000" />
+      <workItem from="1680467996864" duration="3000" />
+      <workItem from="1680727702345" duration="2000" />
+      <workItem from="1680728516220" duration="2000" />
+      <workItem from="1680758294390" duration="2000" />
+      <workItem from="1681757271562" duration="29000" />
+    </task>
+    <task id="LOCAL-00001" summary="init proj">
+      <created>1677161937847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677161937847</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init proj">
+      <created>1677162396122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677162396122</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update ignore">
+      <created>1677173742512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677173742512</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update folder">
+      <created>1677477775807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677477775807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init proj" />
+    <MESSAGE value="update ignore" />
+    <MESSAGE value="update folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="update folder" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/curricula/selection_methods.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="metrics_to_log['selected_id']" />
+        <watch expression="__py_debug_temp_var_320374716.experiment" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RHO_Loss$run_standard_training.coverage" NAME="run_standard_training Coverage Results" MODIFIED="1677575646173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RHO_Loss$run.coverage" NAME="run Coverage Results" MODIFIED="1675624294043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RHO_Loss$ex.coverage" NAME="ex Coverage Results" MODIFIED="1675452349715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/transition-matrix" />
+    <SUITE FILE_PATH="coverage/RHO_Loss$run_cross_domain.coverage" NAME="run_cross_domain Coverage Results" MODIFIED="1676062194516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RHO_Loss$run_transfer.coverage" NAME="run_transfer Coverage Results" MODIFIED="1676486397684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RHO_Loss$run_irreducible.coverage" NAME="run_irreducible Coverage Results" MODIFIED="1675932153171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
